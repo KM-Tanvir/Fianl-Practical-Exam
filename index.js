@@ -21,7 +21,7 @@ function search2(data){
     if(allMeals.length > 5){
         for(i = 1; i<= 5; i++){
             let newDiv = document.createElement("div");
-            newDiv.innerHTML = `Meal ID: ${allMeals[i-1].idMeal}`;
+            newDiv.innerHTML = `Meal ID: ${allMeals[i-1].idMeal} <br> Meal Name: ${allMeals[i-1].strMeal} <br> <img src="${allMeals[i-1].strMealThumb}">`;
 
             newDiv.classList.add("fix");
             disArea.appendChild(newDiv);
