@@ -8,7 +8,6 @@ function search(){
     .then(res => res.json())
     .then(data => search2(data));
 
-
 }
 
 function search2(data){

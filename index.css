@@ -33,3 +33,18 @@ img{
         grid-template-columns: repeat(4, 1fr); /* 4 columns for laptops/PCs */
     }
 }
+
+button{
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid black;
+}
+
+#show {
+    background-color: deepskyblue;
+    border-radius: 5px;
+    color: black; 
+    display: block; 
+    margin: auto;
+
+}
