@@ -9,3 +9,27 @@ img{
     background-color: blanchedalmond;
     border-radius: 10px;
 }
+
+#display{
+    display: grid;
+    gap: 15px;
+}
+
+/* Responsive grid layout */
+@media (max-width: 576px) {
+    #display {
+        grid-template-columns: 1fr; /* 1 column for mobile (iPhone) */
+    }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+    #display {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
+
+@media (min-width: 992px) {
+    #display {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for laptops/PCs */
+    }
+}
