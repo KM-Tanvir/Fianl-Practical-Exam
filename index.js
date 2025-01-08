@@ -20,12 +20,23 @@ function search2(data){
 
     if(allMeals.length > 5){
         for(i = 1; i<= 5; i++){
-            let newDiv = document.createElement("div");
-            newDiv.innerHTML = `Meal ID: ${allMeals[i-1].idMeal} <br> Meal Name: ${allMeals[i-1].strMeal} <br> <img src="${allMeals[i-1].strMealThumb}">`;
+            if(i==5){
+                let newDiv = document.createElement("div");
+                newDiv.innerHTML = `Meal ID: ${allMeals[i-1].idMeal} <br> Meal Name: ${allMeals[i-1].strMeal} <br> <img src="${allMeals[i-1].strMealThumb}"> <br> Cooking Instruction: <br> ${allMeals[i-1].strInstructions} <br> <br> <button id="show" onclick="all()">SHOW ALL</button>`;
 
-            newDiv.classList.add("fix");
-            disArea.appendChild(newDiv);
-        }
+                newDiv.classList.add("fix");
+                disArea.appendChild(newDiv);
+            }
+            else{
+                let newDiv = document.createElement("div");
+                newDiv.innerHTML = `Meal ID: ${allMeals[i-1].idMeal} <br> Meal Name: ${allMeals[i-1].strMeal} <br> <img src="${allMeals[i-1].strMealThumb}"> <br> Cooking Instruction: <br> ${allMeals[i-1].strInstructions}`;
+
+                newDiv.classList.add("fix");
+                disArea.appendChild(newDiv);
+
+            }
+
+    }
 
     }
 
@@ -33,15 +44,13 @@ function search2(data){
 
         for(let i = 1; i <= allMeals.length;i++){
             let newDiv = document.createElement("div");
-            newDiv.innerHTML = `Meal ID: ${allMeals[i-1].idMeal}`;
+                newDiv.innerHTML = `Meal ID: ${allMeals[i-1].idMeal} <br> Meal Name: ${allMeals[i-1].strMeal} <br> <img src="${allMeals[i-1].strMealThumb}"> <br> Cooking Instruction: <br> ${allMeals[i-1].strInstructions}`;
 
-            newDiv.classList.add("fix");
-            disArea.appendChild(newDiv);
+                newDiv.classList.add("fix");
+                disArea.appendChild(newDiv);
         }
 
     }
-
-
 
 
 }
